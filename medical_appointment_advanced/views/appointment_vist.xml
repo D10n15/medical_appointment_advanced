@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_medical_appointment_form" model="ir.ui.view">
+        <field name="name">medical.appointment.form</field>
+        <field name="model">medical.appointment</field>
+        <field name="arch" type="xml">
+            <form string="Cita Médica">
+                <sheet>
+                    <group>
+                        <field name="patient_id"/>
+                        <field name="doctor_id"/>
+                        <field name="date"/>
+                        <field name="status"/>
+                    </group>
+                    <group>
+                        <field name="notes"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_medical_appointment_tree" model="ir.ui.view">
+        <field name="name">medical.appointment.tree</field>
+        <field name="model">medical.appointment</field>
+        <field name="arch" type="xml">
+            <tree string="Citas Médicas">
+                <field name="patient_id"/>
+                <field name="doctor_id"/>
+                <field name="date"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="medical_menu" name="Gestión Médica" sequence="10"/>
+
+    <menuitem id="medical_appointment_menu" name="Citas Médicas"
+              parent="medical_menu" action="medical_appointment_action"/>
+
+    <record id="medical_appointment_action" model="ir.actions.act_window">
+        <field name="name">Citas Médicas</field>
+        <field name="res_model">medical.appointment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

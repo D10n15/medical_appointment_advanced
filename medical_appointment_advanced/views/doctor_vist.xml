@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_medical_doctor_form" model="ir.ui.view">
+        <field name="name">medical.doctor.form</field>
+        <field name="model">medical.doctor</field>
+        <field name="arch" type="xml">
+            <form string="Doctor">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="specialty"/>
+                        <field name="phone"/>
+                        <field name="email"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_medical_doctor_tree" model="ir.ui.view">
+        <field name="name">medical.doctor.tree</field>
+        <field name="model">medical.doctor</field>
+        <field name="arch" type="xml">
+            <tree string="Doctores">
+                <field name="name"/>
+                <field name="specialty"/>
+                <field name="phone"/>
+                <field name="email"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="medical_doctor_menu" name="Doctores"
+              parent="medical_menu" action="medical_doctor_action"/>
+
+    <record id="medical_doctor_action" model="ir.actions.act_window">
+        <field name="name">Doctores</field>
+        <field name="res_model">medical.doctor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
