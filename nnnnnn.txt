@@ -1,0 +1,6 @@
+mongo
+
+mongod.exe --version
+mongod
+mongosh
+show dbs

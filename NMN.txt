@@ -1,0 +1,187 @@
+¿Acepta Reto? *
+El candidato debe desarrollar un módulo avanzado de gestión de citas médicas en Odoo v18 Enterprise, utilizando las siguientes tecnologías:
+
+Backend: Python, PostgreSQL, ORM de Odoo
+
+Frontend: HTML, CSS, JavaScript
+
+Control de versiones: GitHub
+
+Seguridad: Roles y permisos adecuados
+
+Validaciones: En backend y frontend
+
+CRUD completo: Creación, lectura, actualización y eliminación de registros
+
+Notificaciones y Automatización: Uso de Odoo Scheduled Actions y mail templates
+
+API REST: Implementación de endpoints para integración con sistemas externos
+
+
+
+
+
+
+
+El módulo debe seguir esta estructura de archivos:
+
+- medical_appointment_advanced/
+    - __init__.py
+    - __manifest__.py
+    - models/
+        - appointment.py
+        - doctor.py
+        - patient.py
+        - notification.py
+    - security/
+        - ir.model.access.csv
+        - medical_security.xml
+    - views/
+        - appointment_view.xml
+        - doctor_view.xml
+        - patient_view.xml
+        - notification_view.xml
+    - controllers/
+        - api.py
+    - static/
+        - src/css/style.css
+        - src/js/appointment.js
+    - data/
+        - email_template.xml
+    - README.md
+
+
+
+
+
+
+Requerimientos Funcionales
+Modelos de Datos en Odoo
+Modelo de Paciente (medical.patient)
+name: Nombre del paciente (Obligatorio)
+
+email: Correo (Obligatorio, validación de formato)
+
+phone: Teléfono (Opcional)
+
+age: Edad (Obligatorio, mayor a 0)
+
+Restricción: Un paciente no puede tener el mismo correo que otro.
+
+Nueva funcionalidad: Generar un identificador único para cada paciente automáticamente.
+
+
+
+
+
+
+
+Modelo de Doctor (medical.doctor)
+name: Nombre del doctor (Obligatorio)
+
+specialization: Especialización (Obligatorio)
+
+phone: Teléfono (Opcional)
+
+Un doctor puede atender múltiples pacientes.
+
+Nueva funcionalidad: Definir horarios de disponibilidad.
+
+
+
+
+
+Modelo de Cita Médica (medical.appointment)
+patient_id: Relación con medical.patient (Obligatorio)
+
+doctor_id: Relación con medical.doctor (Obligatorio)
+
+date: Fecha y hora de la cita (Obligatorio, no puede ser pasada)
+
+state: Estado de la cita (Programada, Realizada, Cancelada, No asistió)
+
+Nueva funcionalidad: Generar automáticamente un recordatorio por correo 24 horas antes de la cita.
+
+
+
+
+Modelo de Cita Médica (medical.appointment)
+patient_id: Relación con medical.patient (Obligatorio)
+
+doctor_id: Relación con medical.doctor (Obligatorio)
+
+date: Fecha y hora de la cita (Obligatorio, no puede ser pasada)
+
+state: Estado de la cita (Programada, Realizada, Cancelada, No asistió)
+
+Nueva funcionalidad: Generar automáticamente un recordatorio por correo 24 horas antes de la cita.
+
+
+
+
+
+
+Modelo de Notificaciones (medical.notification)
+appointment_id: Relación con medical.appointment
+
+status: Estado de la notificación (Pendiente, Enviado, Fallido)
+
+email_content: Contenido del correo de notificación
+
+Reglas de negocio avanzadas:
+
+Un paciente no puede agendar más de una cita con el mismo doctor el mismo día.
+
+Solo los doctores pueden cambiar el estado de la cita.
+
+Implementar colas de notificación para correos pendientes.
+
+
+
+
+
+
+Seguridad y Permisos Avanzados
+Los accesos deben estar bien configurados en ir.model.access.csv y medical_security.xml.
+
+Pacientes: Solo pueden ver sus propias citas.
+
+Doctores: Pueden ver sus citas y cambiar su estado.
+
+Administradores: Acceso completo.
+
+Nueva funcionalidad: Los administradores pueden ver métricas sobre citas realizadas y canceladas.
+
+
+
+
+
+
+Desarrollo del Frontend y Automatización
+El candidato debe implementar las vistas en XML, agregar interacción con JavaScript y configurar automatizaciones en Odoo.
+
+
+
+
+
+
+Entrega y Evaluación
+Al indicar el usuario GitHub se enviará un enlace de acceso a sh para que pueda subir su código y un usuario en Odoo para validación del requerimiento.
+
+El candidato debe subir el código a un repositorio de GitHub e incluir:
+
+README.md con instrucciones de instalación.
+
+Capturas de pantalla o video corto del módulo en funcionamiento.
+
+Historia de commits bien documentada.
+
+Endpoint de API funcional para consumir citas.
+
+
+
+
+
+
+caro__navarrete
+carloslopez

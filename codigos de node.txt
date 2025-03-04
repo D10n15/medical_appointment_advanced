@@ -1,0 +1,88 @@
+cd // es para determinar una carpeta
+npm // se aplica despues de determinar una carpeta
+y aplica lo siguiente : npm create vite@latest formulario -- --template react
+
+seleciona de la forma que quieras crearla
+existe react y demas y escojes con que lenguaje de programacion lo quieres hacer
+
+npm install// sirve para instalar un modo
+jsx // para cada conponentes para una pagina es una lengua de prog
+npm es la lo principal para cada busqueda
+
+ahora para un enlace directo ejemplo: npm run dev
+
+"dev"; "vite --host--port 3000",: por si deseas canbiarlo esta en los corchetes
+ 
+en typescript se utiliza el siguiente formato
+cd y nombre del archivo
+tsc nombre del archivo y . ts junto ojo
+para atualizar tsc nmb archivo -w
+tsc -init para el archivo de configuracion
+
+npm install -g typescript
+npm install -g ts--node
+npm init
+npm install express cors dotenv nodemon
+npm init -y
+npm install mongoose
+npm install pg pg-hstore sequelize
+npx create-react-app my-app
+cd my-app
+npm install axios react-router-dom styled-components
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+npm install redux react-redux @reduxjs/toolkit
+npm install zustand
+npm install multer morgan concurrently
+npm install jsonwebtoken bcryptjs express-validator
+npm install express cors dotenv nodemon mongoose pg pg-hstore sequelize jsonwebtoken bcryptjs express-validator multer morgan concurrently
+npm install configure
+npm install axios react-router-dom styled-components redux react-redux @reduxjs/toolkit tailwindcss postcss autoprefixer
+npm run dev
+
+npm fund // esto es mas como para recortar o que el sistema mismo lo ejecute
+npm audit fix // para areglar algunas vulnerabilidades
+npm audit fix --force// esto solo es una dependencia si deseas cambiar a una forma no compatible
+npm audit // para mas detalles
+npm outdated// por si las demas no funcionan
+npm update nombre-del-paquete// para atualizar paquetes individual
+npm install express
+node index.js
+npm install ejs
+npm install componentes
+npm install componentes --save-dev
+npm install python-shell
+
+
+Typescript
+cd
+tsc -v /para version
+cd..//para devolver
+npm install -g typescript// para install archivo
+tsc script.ts
+tsc script.ts -w// recordar que no a todos los archivos los llamaras script recuerda poner el nombre del archivo
+tsc -init
+tsc -w/ya esta automatizado usa cuando mates el sitaci
+cuando se crea un poo-- se aplica lo siguinete
+
+//Clases:
+Objetos:
+Encapsulamiento:
+Herencia:
+Polimorfismo:
+
+
+node nombrerpyecto.js
+npm init -y
+npm i express mongoose morgan dotenv cors
+npm i -d typescript @types/express @types/mongoose @types/morgan @types/cors @types/node ts-node-dev
+npm i inflight@latest rimraf@latest glob@lates
+npm update
+npm tsc -ini // en caso de agregar a un proyecto entra en la carpeta de tsconfig.js y conbia el rootDirs y lo activas de la siguiente manera "rootDirs": ["./src"], y luego activamos el otro que "outDir": "./dist"
+
+para cambiar en el paquete json-.-build: tsc
+dev: ts-node-dev src/index.ts
+
+npm run build
+
+
