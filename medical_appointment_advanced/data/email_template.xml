@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="email_template_appointment_reminder" model="mail.template">
+        <field name="name">Recordatorio de Cita Médica</field>
+        <field name="email_from">${(object.doctor_id.email or 'admin@example.com')|safe}</field>
+        <field name="subject">Recordatorio: Cita con ${object.doctor_id.name}</field>
+        <field name="model_id" ref="model_medical_appointment"/>
+        <field name="body_html"><![CDATA[
+            <p>Hola ${object.patient_id.name},</p>
+            <p>Te recordamos que tienes una cita médica con el Dr. ${object.doctor_id.name} el día ${object.date}.</p>
+            <p>Gracias.</p>
+        ]]></field>
+    </record>
+</odoo>
