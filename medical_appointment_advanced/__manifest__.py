@@ -5,7 +5,7 @@
     'sequence': -100,
     'description': """Módulo avanzado para la gestión de citas médicas""",
     'category': 'Medical',
-    'author': 'Tu Nombre',
+    'author': 'Yefferson',
     'website': 'https://tu-sitio-web.com',
     'license': 'LGPL-3',
     'depends': ['base', 'mail'],  # Dependencias necesarias
@@ -16,6 +16,7 @@
         'views/patient_view.xml',
         'views/notification_view.xml',
         'data/email_template.xml',
+        'data/cron_job.xml',
     ],
     'assets': {
         'web.assets_backend': [
